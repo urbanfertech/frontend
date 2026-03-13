@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-golden: #FA9D1C;
+  --color-navy: #121D2B;
+  --color-soft-gray: #F9FAFB;
+  --color-slate: #4B5563;
+  
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+  
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #121D2B;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold text-navy;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  .glass-dark {
+    @apply bg-navy/70 backdrop-blur-md border border-white/10;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  @apply font-inter;
+}
